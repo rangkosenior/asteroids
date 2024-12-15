@@ -12,10 +12,14 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return # exit game loop
+        player.update(dt)
+        
         screen.fill("black")
         player.draw(screen)
         pygame.display.flip()
-        dt += clock.tick(60) / 1000.0
+        
+        # limit fps to 60
+        dt = clock.tick(60) / 1000.0 # dt is the amount of time that has poassed since the last frame was drawn
 
 if __name__ == "__main__":
     main()
