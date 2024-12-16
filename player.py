@@ -2,9 +2,9 @@ from constants import PLAYER_RADIUS, PLAYER_TURN_SPEED, PLAYER_SPEED
 from circleshape import CircleShape
 import pygame
 
-class Player(CircleShape):
-    def __init__(self, x, y, radius = PLAYER_RADIUS):
-        super().__init__(x, y, radius)
+class Player(CircleShape):   
+    def __init__(self, x, y):
+        super().__init__(x, y, radius=PLAYER_RADIUS)
         self.rotation = 0
     
     def triangle(self):
